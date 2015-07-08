@@ -28,7 +28,7 @@ This will output `<img src="/assets/logo.png" />` in development, and `<img src=
 
 ## Requirements
 
-This gem supports Rails 4.x and up. A PR to support Rails 3.x would be greatly appreciated.
+This gem supports Rails 3.1.x and Rails 4.x and up. A PR to support Rails 3.x would be greatly appreciated.
 
 ## Contributing
 

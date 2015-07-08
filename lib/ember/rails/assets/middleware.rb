@@ -25,7 +25,11 @@ module Ember
 
         def inject response
           key = "ASSETS"
-          path = ActionView::Base.assets_manifest.path
+          if Rails::VERSION::MAJOR >= 4
+            path = ActionView::Base.assets_manifest.path
+          else
+            path = Rails::Application.assets_manifest.path
+          end
           markup = Javascript.new(key, path).render
           response.gsub(%r{</head>}, "<script>#{markup}</script></head>")
         end
